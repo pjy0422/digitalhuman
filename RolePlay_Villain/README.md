@@ -29,6 +29,8 @@ This repository contains the official implementation and resources for the paper
 | 3 | Egoists |
 | 4 | Villains |
 
+
+### An Example for Level 1 and Level 4 characters
 <p align="center">
 <img src="https://github.com/Tencent/digitalhuman/blob/main/RolePlay_Villain/figures/example.png" width="700">
 </p>
@@ -44,6 +46,7 @@ Coming soon.
 </p>
 
 ### Citation
+
 
 
 
