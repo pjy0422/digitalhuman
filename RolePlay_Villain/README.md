@@ -25,10 +25,10 @@ The benchmark categorizes characters into four distinct moral levels to measure 
 
 | Level | Description |
 |-------|-------------|
-| 1 | **Moral Paragons** | Virtuous, heroic, and altruistic characters who consistently act for the greater good. |
-| 2 | **Flawed-but-Good** | Characters who are fundamentally good but possess significant personal flaws or make questionable choices. |
-| 3 | **Egoists** | Self-serving individuals who prioritize their own interests, often at the expense of others, but may not be overtly malicious. |
-| 4 | **Villains** | Antagonistic characters who are intentionally malicious, cruel, or destructive. |
+| 1 | **Moral Paragons**: Virtuous, heroic, and altruistic characters who consistently act for the greater good.|
+| 2 | **Flawed-but-Good**: Characters who are fundamentally good but possess significant personal flaws or make questionable choices.|
+| 3 | **Egoists**: Self-serving individuals who prioritize their own interests, often at the expense of others, but may not be overtly malicious. | 
+| 4 | **Villains**: Antagonistic characters who are intentionally malicious, cruel, or destructive. | 
 
 </div>
 
@@ -142,11 +142,11 @@ These characters are moral paragons whose traits align perfectly with the defaul
 
 | Character | Work | Traits | Penalty |
 |-----------|------|--------|----------|
-| Atticus Finch | *To Kill a Mockingbird* | Honest, Principled, Kind, Courageous | 1.12 |
-| Superman | *DC Comics* | Altruistic, Honest, Hopeful, Protective | 1.15 |
-| Captain America | *Marvel Comics* | Loyal, Courageous, Honest, Selfless | 1.19 |
-| Samwise Gamgee | *The Lord of the Rings* | Loyal, Kind, Brave, Humble | 1.21 |
-| Jean-Luc Picard | *Star Trek: TNG* | Diplomatic, Principled, Compassionate, Wise | 1.24 |
+| Lilith  | *City of Glass* | Malicious, Cruel, Selfish, Wise, Manipulative  | 1.89 |
+| Detta Walker | *The Dark Tower* | Violent, Irritable, Sarcastic, Paranoid,Cruel  | 1.39 |
+| Francis Begbie | *Trainspotting* | Violent, Impulsive, Dominant, Irritable, Manipulative  | 1.29 |
+| Old Whateley | *Tales of H P Lovecraft* | Paranoid, Manipulative, Malicious,Stubborn, Conservative | 1.11 |
+| Monsieur Bamatabois | *Les Mis´ erables* | Cruel, Arrogant, Sarcastic, Numb,Dominant | 0.28 |
 
 </div>
 
@@ -163,4 +163,5 @@ Coming soon.
 ### Citation
 
 If you use this benchmark or code, please cite our paper:
+
 
