@@ -105,6 +105,7 @@ This suggests that the reasoning process actively triggers the model's safety gu
 
 We created the VRP Leaderboard to assess models specifically on their villain role-playing capabilities, finding that it does not correlate well with general chatbot performance.
 
+<div align="center">
 | Model | VRP Rank | VRP Score | Arena Rank | Arena Score |
 | :--- | :---: | :---: | :---: | :---: |
 | glm-4.6 | 1 | 2.96 | 10 | 1422 |
@@ -124,6 +125,7 @@ We created the VRP Leaderboard to assess models specifically on their villain ro
 | claude-opus-4.1 | 15 | 2.48 | 2 | 1437 |
 | deepseek-v3 | 16 | 2.41 | 36 | 1391 |
 | qwen3-max | 17 | 2.33 | 10 | 1423 |
+</div>
 
 **Explanation of Results:**
 This scatter plot compares a model's general conversational ability (x-axis, e.g., MT-Bench or Arena Elo) with its specialized villain role-playing score (y-axis, VRP Score). The lack of a clear positive correlation is the key takeaway.
@@ -177,6 +179,7 @@ Coming soon.
 ### Citation
 
 If you use this benchmark or code, please cite our paper:
+
 
 
 
