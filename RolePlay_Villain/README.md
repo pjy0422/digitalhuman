@@ -105,9 +105,25 @@ This suggests that the reasoning process actively triggers the model's safety gu
 
 We created the VRP Leaderboard to assess models specifically on their villain role-playing capabilities, finding that it does not correlate well with general chatbot performance.
 
-<p align="center">
-<img src="https://github.com/Tencent/digitalhuman/blob/main/RolePlay_Villain/figures/leaderboard.png" width="700">
-</p>
+| Model | VRP Rank | VRP Score | Arena Rank | Arena Score |
+| :--- | :---: | :---: | :---: | :---: |
+| glm-4.6 | 1 | 2.96 | 10 | 1422 |
+| deepseek-v3.1-thinking | 2 | 2.82 | 11 | 1415 |
+| kimi-k2 | 3 | 2.79 | 11 | 1415 |
+| gemini-2.5-pro | 4 | 2.75 | 1 | 1451 |
+| deepseek-v3.1 | 5 | 2.71 | 11 | 1416 |
+| o3 | 6 | 2.70 | 2 | 1440 |
+| chatgpt-4o-latest | 7 | 2.65 | 2 | 1440 |
+| deepseek-R1 | 8 | 2.62 | 11 | 1417 |
+| claude-sonnet-4.5 | 9 | 2.56 | 2 | 1438 |
+| glm-4.5 | 10 | 2.55 | 18 | 1406 |
+| claude-sonnet-4.5-thinking | 11 | 2.54 | 1 | 1445 |
+| grok-4 | 12 | 2.54 | 12 | 1413 |
+| claude-opus-4.1-thinking | 13 | 2.53 | 1 | 1447 |
+| grok-4-fast | 14 | 2.50 | 11 | 1420 |
+| claude-opus-4.1 | 15 | 2.48 | 2 | 1437 |
+| deepseek-v3 | 16 | 2.41 | 36 | 1391 |
+| qwen3-max | 17 | 2.33 | 10 | 1423 |
 
 **Explanation of Results:**
 This scatter plot compares a model's general conversational ability (x-axis, e.g., MT-Bench or Arena Elo) with its specialized villain role-playing score (y-axis, VRP Score). The lack of a clear positive correlation is the key takeaway.
@@ -118,10 +134,9 @@ This scatter plot compares a model's general conversational ability (x-axis, e.g
 
 ### Most and Least Challenging Characters
 
-Our benchmark allows us to identify the specific characters that pose the greatest (and least) challenge to LLMs, offering a granular view of model limitations.
+The most challenging characters for LLMs are those defined by a complex combination of malevolent, paranoid, and manipulative traits. As shown in Table 10, the characters with the highest penalty scores are not defined by a single flaw but by a cluster of interconnected negative attributes. Characters like John Beecham (3.88 penalty) and Rat (3.86 penalty) are defined by a persona combining violence, cruelty, paranoia, and manipulation. Portraying such characters requires the model to sustain a psyche that is fundamentally misaligned with its core training. While a model might simulate a single negative trait as a behavioral quirk, embodying a character whose identity is built on a foundation of malice and deceit forces a direct conflict with its safety guardrails, leading to inconsistent or sanitized portrayals.
 
 **Top 5 Most Challenging Characters (Highest Penalty)**
-These characters embody a complex mix of negative traits that directly conflict with LLM safety alignment.
 
 <div align="center">
 
@@ -136,7 +151,6 @@ These characters embody a complex mix of negative traits that directly conflict 
 </div>
 
 **Top 5 Least Challenging Characters (Lowest Penalty)**
-These characters are moral paragons whose traits align perfectly with the default "helpful and harmless" persona of LLMs.
 
 <div align="center">
 
@@ -163,5 +177,6 @@ Coming soon.
 ### Citation
 
 If you use this benchmark or code, please cite our paper:
+
 
 
