@@ -2,11 +2,10 @@
 
 ## Overview
 
-This repository contains the official implementation and resources for the paper:  
 **"Too Good to be Bad: On the Failure of LLMs to Role-Play Villains"**
 
 
-> Large Language Models (LLMs) are increasingly tasked with creative generation, including the simulation of fictional characters. However, their ability to portray non-prosocial, antagonistic personas remains largely unexamined. We hypothesize that the safety alignment of modern LLMs creates a fundamental conflict with the task of authentically role-playing morally ambiguous or villainous characters. To investigate this, we introduce the **Moral RolePlay** benchmark, a new dataset featuring a four-level moral alignment scale and a balanced test set for rigorous evaluation.
+Large Language Models (LLMs) are increasingly tasked with creative generation, including the simulation of fictional characters. However, their ability to portray non-prosocial, antagonistic personas remains largely unexamined. We hypothesize that the safety alignment of modern LLMs creates a fundamental conflict with the task of authentically role-playing morally ambiguous or villainous characters. To investigate this, we introduce the **Moral RolePlay** benchmark, a new dataset featuring a four-level moral alignment scale and a balanced test set for rigorous evaluation.
 
 ### Key Findings
 
@@ -126,3 +125,4 @@ If you use this benchmark or code, please cite our paper:
   journal={arXiv preprint},
   year={2025}
 }
+
