@@ -17,7 +17,7 @@ This repository contains the official implementation and resources for the paper
 - 🎭 **VRP Leaderboard:** General chatbot proficiency (e.g., Arena scores) is a poor predictor of villain role-playing ability. Highly safety-aligned models (e.g., Claude) perform worst.
 
 <p align="center">
-<img src="https://github.com/Tencent/digitalhuman/blob/main/RolePlay_Villain/figures/mian.png" width="700">
+<img src="https://github.com/Tencent/digitalhuman/blob/main/RolePlay_Villain/figures/main.png" width="700">
 </p>
 
 ### Moral Alignment Levels
@@ -44,6 +44,7 @@ Coming soon.
 </p>
 
 ### Citation
+
 
 
 
