@@ -20,7 +20,7 @@ Large Language Models (LLMs) are increasingly tasked with creative generation, i
 
 ### Moral Alignment Levels
 
-<p align="center">
+<div align="center">
 
 | Level | Description |
 |-------|-------------|
@@ -29,7 +29,7 @@ Large Language Models (LLMs) are increasingly tasked with creative generation, i
 | 3 | Egoists |
 | 4 | Villains |
 
-</p>
+</div>
 
 ### An Example for Level 1 and Level 4 characters
 <p align="center">
@@ -119,10 +119,6 @@ Coming soon.
 If you use this benchmark or code, please cite our paper:
 
 ```bibtex
-@article{yi2025good,
-  title={Too Good to be Bad: On the Failure of LLMs to Role-Play Villains},
-  author={Yi, Zihao and Jiang, Qingxuan and Ma, Ruotian and Chen, Xingyu and Yang, Qu and Wang, Mengru and Ye, Fanghua and Shen, Ying and Tu, Zhaopeng and Li, Xiaolong and Linus},
-  journal={arXiv preprint},
-  year={2025}
-}
+
+
 
