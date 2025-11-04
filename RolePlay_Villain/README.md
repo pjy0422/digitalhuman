@@ -16,7 +16,9 @@ This repository contains the official implementation and resources for the paper
 - 🧠 **Reasoning Doesn't Help:** Explicit reasoning (e.g., chain-of-thought) does not improve—and can even hinder—villain portrayals.
 - 🎭 **VRP Leaderboard:** General chatbot proficiency (e.g., Arena scores) is a poor predictor of villain role-playing ability. Highly safety-aligned models (e.g., Claude) perform worst.
 
-*(Include Figure 1 here: Illustration of the core question and performance decline across moral levels)*
+<p align="center">
+<img src="https://github.com/Tencent/digitalhuman/blob/main/RolePlay_Villain/figures/mian.png" width="700">
+</p>
 
 ### Moral Alignment Levels
 
@@ -27,7 +29,9 @@ This repository contains the official implementation and resources for the paper
 | 3 | Egoists |
 | 4 | Villains |
 
-*(Include Table 1 here: Example profiles of Jean Valjean vs. Joffrey Baratheon)*
+<p align="center">
+<img src="https://github.com/Tencent/digitalhuman/blob/main/RolePlay_Villain/figures/example.png" width="700">
+</p>
 
 ## Getting Started
 
@@ -35,9 +39,12 @@ Coming soon.
 
 ### Villain RolePlay (VRP) Leaderboard
 
-*(Include Table 7 here: VRP Leaderboard comparing models like glm-4.6, gemini-2.5-pro, claude-opus-4.1, etc.)*
+<p align="center">
+<img src="https://github.com/Tencent/digitalhuman/blob/main/RolePlay_Villain/figures/leaderboard.png" width="700">
+</p>
 
 ### Citation
+
 
 
 
