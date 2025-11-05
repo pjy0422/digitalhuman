@@ -174,13 +174,130 @@ Our work provides the first systematic evidence that safety alignment creates a 
 
 This "Too Good to be Bad" phenomenon highlights a critical trade-off between model safety and creative capability, with implications for narrative generation, game development, and other creative applications.
 
-## Getting Started
 
-Coming soon.
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+1.  Cloned this repository to your local machine.
+2.  Installed all required Python packages. It is highly recommended to use a virtual environment.
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Quick Start Guide
+
+Follow these three steps to configure and launch your experiment.
+
+### Step 1: Configure Your Models and API Keys
+
+First, you need to add the API calling logic for the LLMs you want to test. All model configurations, including API keys, are handled in `self_models.py`.
+
+-   Open the `self_models.py` file.
+-   Import the necessary libraries (e.g., `openai`).
+-   Add your API key and instantiate the client.
+-   Inside the `call_LLM` function, add a condition for your model. The `model_name` you use here must match the one you will set in `run_process.sh`.
+
+Here is a template for adding the `gpt-4o` model:
+
+```python
+# self_models.py
+
+import openai
+import os
+
+# --- Configuration Section ---
+# Place your API keys here.
+# For better security, consider loading from environment variables or a config file.
+client = openai.OpenAI(
+    api_key="sk-YOUR_OPENAI_API_KEY_HERE" 
+)
+# ---------------------------
+
+def call_LLM(prompt, model_name):
+    # Default response for testing or if a model is not found
+    response = '1' 
+    
+    if model_name == "gpt-4o":
+        try:
+            # This is an example template for calling the GPT-4o API.
+            # You may need to adjust it based on your specific needs (e.g., system prompts, temperature).
+            completion = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+            response = completion.choices[0].message.content
+        except Exception as e:
+            print(f"An error occurred while calling GPT-4o: {e}")
+            response = "API_CALL_ERROR" # Return an error message
+
+            
+    return response
+```
+
+> **Security Note:** Hardcoding API keys directly in your source code is a security risk, especially if the repository is public. For better security, we recommend using environment variables or a configuration file (e.g., `.env`) to manage your keys.
+
+### Step 2: Configure and Run the Experiment
+
+All experiment settings are managed in the `run_process.sh` script.
+
+-   Navigate to the `code/` directory and open `run_process.sh`.
+-   Configure the parameters for your experiment.
+
+#### Parameter Descriptions
+
+*   `--test_file`: The path to your test dataset.
+*   `--actor_model`: The name of the model to be used as the 'Actor'. **This name must match a `model_name` you configured in `self_models.py`**.
+*   `--judge_model`, `--nsp_model`, `--env_model`: Same configuration logic as `--actor_model` for their respective roles.
+*   `--thinking_pattern`: Defines the prompt style. This is fixed to `third_person` and should not be changed.
+*   `--num_workers`: The number of parallel processes to run for the experiment.
+*   `--wo_thought`: Include this flag to disable the chain-of-thought process. By default, thinking is enabled if this flag is absent.
+
+Here is an example configuration within `run_process.sh`:
+
+```bash
+# code/run_process.sh
+
+# A list of all actor models you want to test in this run
+act_models=("gpt-4o") 
+
+for act_model in ${act_models[@]}
+do
+    python main.py \
+        --test_file ../data/your_test_set.json \
+        --actor_model ${act_model} \
+        --judge_model gpt-4o \
+        --nsp_model gpt-4o \
+        --env_model gpt-4o \
+        --thinking_pattern third_person \
+        --num_workers 8 \
+        # --wo_thought # Uncomment this line to disable the thought process
+done
+```
+
+#### Run the Experiment
+
+Once you have configured the script, execute it from within the `code` directory:
+
+```bash
+cd code
+bash run_process.sh
+```
+
+### Step 3: Check the Results
+
+After the script finishes, the outputs will be organized into the following directories at the root of the project:
+
+*   **`exp/`**: This directory contains the main output files and results from your experiment.
+*   **`log/`**: This directory contains detailed log files for each run, which are useful for debugging and tracking progress.
 
 ### Citation
 
 If you use this benchmark or code, please cite our paper:
+
 
 
 
