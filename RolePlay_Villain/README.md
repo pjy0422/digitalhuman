@@ -202,11 +202,8 @@ First, you need to add the API calling logic for the LLMs you want to test. All 
 Here is a template for adding the `gpt-4o` model:
 
 ```python
-# self_models.py
-
 import openai
 import os
-
 # --- Configuration Section ---
 # Place your API keys here.
 # For better security, consider loading from environment variables or a config file.
@@ -214,27 +211,12 @@ client = openai.OpenAI(
     api_key="sk-YOUR_OPENAI_API_KEY_HERE" 
 )
 # ---------------------------
-
 def call_LLM(prompt, model_name):
-    # Default response for testing or if a model is not found
-    response = '1' 
-    
     if model_name == "gpt-4o":
-        try:
-            # This is an example template for calling the GPT-4o API.
-            # You may need to adjust it based on your specific needs (e.g., system prompts, temperature).
-            completion = client.chat.completions.create(
-                model="gpt-4o",
-                messages=[
-                    {"role": "user", "content": prompt}
-                ]
-            )
-            response = completion.choices[0].message.content
-        except Exception as e:
-            print(f"An error occurred while calling GPT-4o: {e}")
-            response = "API_CALL_ERROR" # Return an error message
-
-            
+          completion = client.chat.completions.create(
+              model="gpt-4o",
+              messages=[{"role": "user", "content": prompt}])
+          response = completion.choices[0].message.content
     return response
 ```
 
@@ -297,6 +279,7 @@ After the script finishes, the outputs will be organized into the following dire
 ### Citation
 
 If you use this benchmark or code, please cite our paper:
+
 
 
 
