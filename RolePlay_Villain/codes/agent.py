@@ -434,7 +434,7 @@ class Agent:
             message (str): Content of the message
         """
         if message:
-            if thinking!='none':#有思考，吧思考加进去，防止模型跑着跑着忘记思考
+            if thinking!='none':
             # Append message to last message if same role, otherwise add new message
                 message = f'[Behind-the-Scenes Thinking]\n\n{thinking}\n\n[Output]\n{message}'
                 if self.messages and self.messages[-1]['role'] == role:
@@ -454,4 +454,5 @@ class Agent:
         Resets the conversation history to initial state with only system prompt.
         """
         self.messages = self.messages[:1]
+
     
