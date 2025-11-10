@@ -256,7 +256,7 @@ do
         --env_model gpt-4o \
         --thinking_pattern third_person \
         --num_workers 8 \
-        # --wo_thought # Uncomment this line to disable the thought process
+        --wo_thought # Uncomment this line to disable the thought process
 done
 ```
 
@@ -289,3 +289,4 @@ If you use this benchmark or code, please cite our paper:
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2511.04962}, 
 }
+
