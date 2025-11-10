@@ -279,6 +279,17 @@ After the script finishes, the outputs will be organized into the following dire
 ### Citation
 
 If you use this benchmark or code, please cite our paper:
+```bibtex
+@misc{yi2025goodbadfailurellms,
+      title={Too Good to be Bad: On the Failure of LLMs to Role-Play Villains}, 
+      author={Zihao Yi and Qingxuan Jiang and Ruotian Ma and Xingyu Chen and Qu Yang and Mengru Wang and Fanghua Ye and Ying Shen and Zhaopeng Tu and Xiaolong Li and Linus},
+      year={2025},
+      eprint={2511.04962},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2511.04962}, 
+}
+
 
 
 
