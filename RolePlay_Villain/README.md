@@ -6,7 +6,7 @@
 <img src="https://github.com/Tencent/digitalhuman/blob/main/RolePlay_Villain/figures/main.png" width="700">
 </p>
 
-Large Language Models (LLMs) are increasingly tasked with creative generation, including the simulation of fictional characters. However, their ability to portray non-prosocial, antagonistic personas remains largely unexamined. We hypothesize that the safety alignment of modern LLMs creates a fundamental conflict with the task of authentically role-playing morally ambiguous or villainous characters. To investigate this, we introduce the **Moral RolePlay** benchmark, a new dataset featuring a four-level moral alignment scale and a balanced test set for rigorous evaluation.
+Large Language Models (LLMs) are increasingly tasked with creative generation, including the simulation of fictional characters. However, their ability to portray non-prosocial, antagonistic personas remains largely unexamined. We hypothesize that the safety alignment of modern LLMs creates a fundamental conflict with the task of authentically role-playing morally ambiguous or villainous characters. To investigate this, we introduce the **Moral RolePlay** benchmark, a new dataset featuring a four-level moral alignment scale and a balanced test set for rigorous evaluation. Access to the complete dataset: https://huggingface.co/datasets/Zihao1/Moral-RolePlay/tree/main
 
 ### Key Findings
 
@@ -279,6 +279,7 @@ After the script finishes, the outputs will be organized into the following dire
 ### Citation
 
 If you use this benchmark or code, please cite our paper:
+
 
 
 
