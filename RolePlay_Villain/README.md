@@ -48,14 +48,14 @@ Our large-scale evaluation reveals a consistent, monotonic decline in role-playi
 </p>
 
 - **Level 1 (Moral Paragons):** 3.21 average fidelity score
-- **Level 2 (Flawed-but-Good):** 3.13 average fidelity score  
+- **Level 2 (Flawed-but-Good):** 3.14 average fidelity score  
 - **Level 3 (Egoists):** 2.71 average fidelity score
-- **Level 4 (Villains):** 2.61 average fidelity score
+- **Level 4 (Villains):** 2.62 average fidelity score
 
 **Explanation of Results:**
 The graph and data clearly illustrate the core finding of the paper. As the character's moral alignment shifts from positive (Level 1 & 2) to negative (Level 3 & 4), the LLM's ability to accurately role-play them drops significantly.
 
-The most critical observation is the **sharpest performance drop (-0.42) between Level 2 (Flawed-but-Good) and Level 3 (Egoists)**. This suggests the primary challenge for LLMs is not simply portraying overt evil, but rather abandoning the prosocial, "helpful" persona. The moment a character's motivation becomes self-serving and disregards others' well-being, the models' safety alignment creates a conflict, leading to a substantial decrease in role-playing fidelity. The further decline into Level 4 (Villains) is less pronounced, indicating that the initial break from prosocial behavior is the main hurdle.
+The most critical observation is the **sharpest performance drop (-0.43) between Level 2 (Flawed-but-Good) and Level 3 (Egoists)**. This suggests the primary challenge for LLMs is not simply portraying overt evil, but rather abandoning the prosocial, "helpful" persona. The moment a character's motivation becomes self-serving and disregards others' well-being, the models' safety alignment creates a conflict, leading to a substantial decrease in role-playing fidelity. The further decline into Level 4 (Villains) is less pronounced, indicating that the initial break from prosocial behavior is the main hurdle.
 
 ### Trait-Based Performance Analysis
 
@@ -115,17 +115,18 @@ We created the VRP Leaderboard to assess models specifically on their villain ro
 | gemini-2.5-pro | 4 | 2.75 | 1 | 1451 |
 | deepseek-v3.1 | 5 | 2.71 | 11 | 1416 |
 | o3 | 6 | 2.70 | 2 | 1440 |
-| chatgpt-4o-latest | 7 | 2.65 | 2 | 1440 |
-| deepseek-R1 | 8 | 2.62 | 11 | 1417 |
-| claude-sonnet-4.5 | 9 | 2.56 | 2 | 1438 |
-| glm-4.5 | 10 | 2.55 | 18 | 1406 |
-| claude-sonnet-4.5-thinking | 11 | 2.54 | 1 | 1445 |
-| grok-4 | 12 | 2.54 | 12 | 1413 |
-| claude-opus-4.1-thinking | 13 | 2.53 | 1 | 1447 |
-| grok-4-fast | 14 | 2.50 | 11 | 1420 |
-| claude-opus-4.1 | 15 | 2.48 | 2 | 1437 |
-| deepseek-v3 | 16 | 2.41 | 36 | 1391 |
-| qwen3-max | 17 | 2.33 | 10 | 1423 |
+| hunyuan-turbos | 7 | 2.66 | 49 | 1380 |
+| chatgpt-4o-latest | 8 | 2.65 | 2 | 1440 |
+| deepseek-R1 | 9 | 2.62 | 11 | 1417 |
+| claude-sonnet-4.5 | 10 | 2.56 | 2 | 1438 |
+| glm-4.5 | 11 | 2.55 | 18 | 1406 |
+| claude-sonnet-4.5-thinking | 12 | 2.54 | 1 | 1445 |
+| grok-4 | 13 | 2.54 | 12 | 1413 |
+| claude-opus-4.1-thinking | 14 | 2.53 | 1 | 1447 |
+| grok-4-fast | 15 | 2.50 | 11 | 1420 |
+| claude-opus-4.1 | 16 | 2.48 | 2 | 1437 |
+| deepseek-v3 | 17 | 2.41 | 36 | 1391 |
+| qwen3-max | 18 | 2.33 | 10 | 1423 |
 
 </div>
 
@@ -289,4 +290,5 @@ If you use this benchmark or code, please cite our paper:
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2511.04962}, 
 }
+
 
