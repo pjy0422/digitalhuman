@@ -86,11 +86,11 @@ conda activate swf
 pip install tabulate
 pip install torch # to fix the random seed
 ```
-Step 2: Download the data for the SWF environment
+### Step 2: Download the data for the SWF environment
 
 The data for our SWF environment is released. Please download and place it in the env/ directory. See the env/READMD.md for more details.
 
-Step 3: Run the Code
+### Step 3: Run the Code
 
 Run the experiment under different persuasion settings. Please first have your own LLM key. By default, we use OpenAI’s key to call LLMs.
 ```bash
