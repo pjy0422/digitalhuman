@@ -1,26 +1,23 @@
-# Social Welfare Function Leaderboard
+# Social Welfare Function Leaderboard: When LLM Agents Allocate Social Welfare
 
-We propose the **Social Welfare Function (SWF) Benchmark & Leaderboard**, a simulation where an LLM acts as a sovereign allocator, distributing tasks to heterogeneous recipients. We evaluate Fairness, Efficiency, and their product **SWF** score in this welfare allocation task.
+<div align="center">
+   
+![Project](https://img.shields.io/badge/Project-SWF-blue?style=for-the-badge&logo=github)
+[![arXiv](https://img.shields.io/badge/arXiv-2510.01164-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.01164)
+[![Data](https://img.shields.io/badge/DATA-Download-34A853?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1SMmyIe5UGyf5S2Xs7WvvIl-o-4wv0k1V/view?usp=sharing)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge&)]()
 
-We reveal three main points:
+</div>
 
-(i) general chat ability (Arena rank) is **misaligned** with welfare allocation capability;
+We propose the **Social Welfare Function (SWF) Benchmark & Leaderboard** — a simulation where an LLM acts as a sovereign allocator, distributing tasks to heterogeneous recipients.  
+We score **Fairness** *(1−Gini)*, **Efficiency** *(ROI)*, and their product **SWF = (1−Gini) × ROI*, revealing that general chat ability (Arena rank) is **misaligned** with welfare-allocation skill and that models are **steerable** via simple social-influence prompts.
 
-(ii) LLMs tend to be **utilitarian**, e.g., typically perfering collective efficiency while reducing individual fairness; and
-
-(iii) LLM's allocation perference are **steerable** via simple social-influence prompts.
-
-
-
-![framework](./asset/workflow.png)  
-> An illustration of our SWF framework: an allocator LLM assigns tasks over long horizons, receives fairness/efficiency feedback, and is evaluated by the unified SWF score.
+![framework](./asset/workflow.png)
+<p align="center"><sub>An illustration of our SWF framework: an allocator LLM assigns tasks over long horizons, receives fairness/efficiency feedback, and is evaluated by the unified SWF score.</sub></p>
 
 ## Main Result
 
-
-
 ### Social Welfare Function Leaderboard
-
 - **Balanced governance matters**: top SWF models jointly optimize fairness and efficiency rather than a single objective.  
 - **Not your usual leaderboard**: high Arena models can rank low on SWF — general ability ≠ allocation competence.  
 - **Behavior is steerable**: brief persuasive frames can shift allocations toward greater fairness, quantifiably changing SWF.  
@@ -80,10 +77,74 @@ We reveal three main points:
 </table>
 
 
+## Getting Started
 
+### Setup Your Python Environment
+```bash
+conda create -n swf python=3.10
+conda activate swf
+pip install tabulate
+pip install torch # to fix the random seed
+```
 
+### Step 2: download the data for SWF environment
 
+The data for our SWF environment is released. Please download and place it in the `env/` directory. See the `env/READMD.md` for more details.
 
+### Step 3: Run the Code
 
+Run the experiment under different persuasion settings. Please first have your own LLM key. By default, we use the OpenAI's key to call LLMs.
+```bash
+ID=index python run.py \
+    --output_dir results/temptation/GPT-4o \
+    --model_name GPT-4o \
+    --base_url BASE_URL \
+    --api_key API_KEY \
+    --input_file YOUR_PATH/batch_tasks_flow.json \
+    --persona "general"
+```
 
+Evaluate LLMs under four persuasion strategies. Please check our [Paper](https://arxiv.org/abs/2510.01164) for more explanation.
+1. Temptation: persuade LLMs to act more fairly by giving benefits
+```bash
+ID=index python run.py \
+    --output_dir results/temptation/GPT-4o \
+    --model_name GPT-4o \
+    --base_url BASE_URL \
+    --api_key API_KEY \
+    --input_file YOUR_PATH/batch_tasks_flow.json \
+    --persona "must fair with benefit"
+```
 
+2. Threaten: forcing the LLMs to act more fairly.
+```bash
+ID=index python run.py \
+    --output_dir results/threaten/GPT-4o  \
+    --model_name GPT-4o \
+    --base_url BASE_URL \
+    --api_key API_KEY \
+    --input_file YOUR_PATH/batch_tasks_flow.json \
+    --persona "must fair with penalty"
+```
+
+3. Internalization: considers fairness as an intrinsic value aligned with collective welfare.
+```bash
+ID=index python run.py \
+    --output_dir results/internalization/GPT-4o \
+    --model_name GPT-4o \
+    --base_url BASE_URL \
+    --api_key API_KEY \
+    --input_file YOUR_PATH/batch_tasks_flow.json \
+    --persona 'general internalization'
+```
+
+4. Identification: uses evidence-based persuasion appealing to normative standards
+```bash
+ID=index python run.py \
+    --output_dir results/identification/GPT-4o \
+    --model_name GPT-4o \
+    --base_url BASE_URL \
+    --api_key API_KEY \
+    --input_file YOUR_PATH/batch_tasks_flow.json \
+    --persona 'general identification'
+```
