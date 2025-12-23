@@ -86,14 +86,13 @@ conda activate swf
 pip install tabulate
 pip install torch # to fix the random seed
 ```
+Step 2: Download the data for the SWF environment
 
-### Step 2: download the data for SWF environment
+The data for our SWF environment is released. Please download and place it in the env/ directory. See the env/READMD.md for more details.
 
-The data for our SWF environment is released. Please download and place it in the `env/` directory. See the `env/READMD.md` for more details.
+Step 3: Run the Code
 
-### Step 3: Run the Code
-
-Run the experiment under different persuasion settings. Please first have your own LLM key. By default, we use the OpenAI's key to call LLMs.
+Run the experiment under different persuasion settings. Please first have your own LLM key. By default, we use OpenAI’s key to call LLMs.
 ```bash
 ID=index python run.py \
     --output_dir results/temptation/GPT-4o \
@@ -103,8 +102,8 @@ ID=index python run.py \
     --input_file YOUR_PATH/batch_tasks_flow.json \
     --persona "general"
 ```
+Evaluate LLMs under four persuasion strategies. Please check our Paper for more explanation.
 
-Evaluate LLMs under four persuasion strategies. Please check our [Paper](https://arxiv.org/abs/2510.01164) for more explanation.
 1. Temptation: persuade LLMs to act more fairly by giving benefits
 ```bash
 ID=index python run.py \
@@ -115,7 +114,6 @@ ID=index python run.py \
     --input_file YOUR_PATH/batch_tasks_flow.json \
     --persona "must fair with benefit"
 ```
-
 2. Threaten: forcing the LLMs to act more fairly.
 ```bash
 ID=index python run.py \
@@ -126,7 +124,6 @@ ID=index python run.py \
     --input_file YOUR_PATH/batch_tasks_flow.json \
     --persona "must fair with penalty"
 ```
-
 3. Internalization: considers fairness as an intrinsic value aligned with collective welfare.
 ```bash
 ID=index python run.py \
@@ -137,7 +134,6 @@ ID=index python run.py \
     --input_file YOUR_PATH/batch_tasks_flow.json \
     --persona 'general internalization'
 ```
-
 4. Identification: uses evidence-based persuasion appealing to normative standards
 ```bash
 ID=index python run.py \
