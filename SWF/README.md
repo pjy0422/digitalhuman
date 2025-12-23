@@ -1,4 +1,4 @@
-# Social Welfare Function Leaderboard: When LLM Agents Allocate Social Welfare
+# When LLM Agents Allocate Social Welfare
 
 <div align="center">
    
