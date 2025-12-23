@@ -146,3 +146,13 @@ ID=index python run.py \
     --input_file YOUR_PATH/batch_tasks_flow.json \
     --persona 'general identification'
 ```
+
+## Citation
+```txt
+@article{shi2025socialwelfarefunctionleaderboard,
+   title={Social Welfare Function Leaderboard: When LLM Agents Allocate Social Welfare}, 
+   author={Zhengliang Shi and Ruotian Ma and Jen-tse Huang and Xinbei Ma and Xingyu Chen and Mengru Wang and Qu Yang and Yue Wang and Fanghua Ye and Ziyang Chen and Shanyi Wang and Cixing Li and Wenxuan Wang and Zhaopeng Tu and Xiaolong Li and Zhaochun Ren and Linus},
+   year={2025},
+   journal={arXiv preprint arXiv: 2510.01164},
+}
+```
