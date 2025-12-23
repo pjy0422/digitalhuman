@@ -1,4 +1,6 @@
-# When LLM Agents Allocate Social Welfare
+<div align="center">
+   <h1> 🤔 When LLM Agents Allocate Social Welfare</h1>
+</div>
 
 <div align="center">
    
