@@ -17,7 +17,7 @@ We score **Fairness** *(1−Gini)*, **Efficiency** *(ROI)*, and their product **
 ![framework](./asset/workflow.png)
 <p align="center"><sub>An illustration of our SWF framework: an allocator LLM assigns tasks over long horizons, receives fairness/efficiency feedback, and is evaluated by the unified SWF score.</sub></p>
 
-## Main Result
+## 🔍 Main Result
 
 ### Social Welfare Function Leaderboard
 - **Balanced governance matters**: top SWF models jointly optimize fairness and efficiency rather than a single objective.  
@@ -79,7 +79,7 @@ We score **Fairness** *(1−Gini)*, **Efficiency** *(ROI)*, and their product **
 </table>
 
 
-## Getting Started
+## 👊 Getting Started
 
 ### Setup Your Python Environment
 ```bash
@@ -147,7 +147,9 @@ ID=index python run.py \
     --persona 'general identification'
 ```
 
-## Citation
+## 🫰 Citation
+If you find this work useful, please cite our paper.
+
 ```txt
 @article{shi2025socialwelfarefunctionleaderboard,
    title={Social Welfare Function Leaderboard: When LLM Agents Allocate Social Welfare}, 
