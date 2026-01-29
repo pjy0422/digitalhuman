@@ -234,11 +234,14 @@ python "code/critic_agent_video.py" \
 If you find this work useful, please cite:
 
 ```bibtex
-@article{directing2026,
-  title={The Script is All You Need: An Agentic Framework for Long-Horizon Dialogue-to-Cinematic Video Generation},
-  author={},
-  journal={arXiv preprint},
-  year={2026}
+@misc{mu2026scriptneedagenticframework,
+      title={The Script is All You Need: An Agentic Framework for Long-Horizon Dialogue-to-Cinematic Video Generation}, 
+      author={Chenyu Mu and Xin He and Qu Yang and Wanshun Chen and Jiadi Yao and Huang Liu and Zihao Yi and Bo Zhao and Xingyu Chen and Ruotian Ma and Fanghua Ye and Erkun Yang and Cheng Deng and Zhaopeng Tu and Xiaolong Li and Linus},
+      year={2026},
+      eprint={2601.17737},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2601.17737}, 
 }
 ```
 
