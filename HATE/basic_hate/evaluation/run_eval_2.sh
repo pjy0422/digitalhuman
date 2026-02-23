@@ -1,1 +1,0 @@
-CUDA_VISIBLE_DEVICES=0 python eval_v2_benchmark.py --path_id template_en_nocomp_nojudgev3_4_6_all --do_topic --do_behave
